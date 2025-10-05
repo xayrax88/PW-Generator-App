@@ -13,48 +13,76 @@
 </head>
 
 <body>
-  <main>
-    <h1>Password Generator</h1>
+  <main class="main-container">
+    <p class="heading">Password Generator</p>
 
-    <div class="copy-text-container">
-      <p class="copy"></p>
-    </div>
+    <div class="inner-container">
 
-    <div class="password-container">
+      <section class="password-copy">
+        <div class="password">
+          <p class="password-text">P4$5W0rD!</p>
+        </div>
+        <div class="copy-image">
+          <p class="copied-text"></p>
+          <!--           <img class="copy" src="./assets/images/icon-copy.svg" alt="Copy graphic"> -->
+          <button class="copy">Copy</button>
+        </div>
+      </section>
 
-      <p>Character Length</p>
-      <p class="character-length"></p>
+      <form class="form-section">
+        <div class="slider">
+          <div class="character">
+            <p class="character-text">Character Length</p>
+            <p class="character-amount"></p>
+          </div>
+          <div class="slider-container">
+            <label for="slider" class="hidden-label"></label>
+            <input type="range" name="slider" id="slider" min="1" max="20" value="10">
+          </div>
+        </div>
 
-      <div class="slidecontainer">
-        <input type="range" min="1" max="16" value="8" class="slider" id="characterRange">
-      </div>
+        <div class="checkboxes">
+          <div class="checkbox-container">
+            <input type="checkbox" name="uppercase" id="uppercase" value="uppercase">
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
 
-      <div class="radio-container">
-        Include Uppercase Letters
-        Include Lowercase Letters
-        Include Numbers
-        Include Symbols
-      </div>
+          <div class="checkbox-container">
+            <input type="checkbox" name="lowercase" id="lowercase" value="lowercase">
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
 
+          <div class="checkbox-container">
+            <input type="checkbox" name="numbers" id="numbers" value="numbers">
+            <label for="numbers">Include Numbers</label>
+          </div>
 
+          <div class="checkbox-container">
+            <input type="checkbox" name="symbols" id="symbols" value="symbols">
+            <label for="symbols">Include Symbols</label>
+          </div>
+          <small class="error"></small>
+        </div>
 
+        <div class="strength-container">
+          <div class="strength">
+            <p class="strength-text">Strength</p>
+          </div>
+          <div class="strength-bars">
+            <p class="strength-word"></p>
+            <div class="bar" id="too-weak"></div>
+            <div class="bar" id="weak"></div>
+            <div class="bar" id="medium"></div>
+            <div class="bar" id="strong"></div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="generate">Generate<span>&rsaquo;</span></button>
+        </div>
+      </form>
     </div>
   </main>
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
 </body>
 
 </html>
